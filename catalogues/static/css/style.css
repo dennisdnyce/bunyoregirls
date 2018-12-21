@@ -67,7 +67,7 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
 .w3_search input[type="text"]{
 	outline: none;
     border: none;
-    background:#1da1f2;
+    background:#696969;
     padding: 10px;
     text-align: center;
     font-size: 14px;
@@ -89,7 +89,7 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
     border-bottom-right-radius: 25px;
 }
 .w3_search input[type="submit"]:hover{
-	background:#1da1f2;
+	background:#696969;
 }
 .w3l_sign_in_register{
 	float: right;
@@ -147,7 +147,7 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
     padding: 0;
 }
 .movies_nav {
-    background: #1da1f2;
+    background: #696969;
 }
 .navbar-default .navbar-nav > li > a {
     color: #000000;
@@ -186,7 +186,7 @@ ul.dropdown-menu.multi-column {
     padding: 1em;
 }
 ul.dropdown-menu.multi-column ul li a:hover{
-	color:#1da1f2;
+	color:#696969;
 }
 /*-- //nav --*/
 /*-- banner-bottom --*/
@@ -225,7 +225,7 @@ a.w3_play_icon span,a.w3_play_icon1 span,a.w3_play_icon2 span {
     top: 36%;
 }
 .agile_tv_series_grid_right{
-	background:#1da1f2;
+	background:#696969;
 	min-height:312px;
 	padding:3em 3em 0;
 	width: 48.6%;
@@ -301,7 +301,7 @@ p.fexi_header_para1 a i {
   transition: all 1s;
 }
 .w3_twitter{
-	background:#1da1f2;
+	background:#696969;
 }
 .w3_facebook{
 	background:#3b5998;
@@ -373,7 +373,7 @@ p.fexi_header_para1 a i {
 /*-- //Latest-tv-series --*/
 /*-- footer --*/
 .footer{
-	background:#1da1f2;
+	background:#696969;
 	padding:4em 0;
 }
 .w3ls_footer_grid_left1{
@@ -381,7 +381,7 @@ p.fexi_header_para1 a i {
 }
 .w3ls_footer_grid_left1 h2{
 	font-size: 2em;
-    color:#1da1f2;
+    color:#696969;
 	text-transform:uppercase;
     font-style: normal;
 	margin-bottom:.5em;
@@ -403,7 +403,7 @@ p.fexi_header_para1 a i {
 .w3ls_footer_grid_left1_pos input[type="submit"]{
 	outline: none;
     width: 25%;
-    background:#1da1f2;
+    background:#696969;
 	font-size:14px;
 	text-transform:uppercase;
 	color:#fff;
@@ -462,7 +462,7 @@ p.fexi_header_para1 a i {
     padding-bottom: .3em;
 }
 .w3ls_footer_grid_right a h2 span{
-	color: #1da1f2;
+	color: #696969;
     font-size: .3em;
     display: block;
     font-weight: 300;
@@ -503,7 +503,7 @@ p.fexi_header_para1 a i {
     background: #ffffff;
     max-width: 400px;
     width: 100%;
-    border-top: 5px solid #1da1f2;
+    border-top: 5px solid #696969;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
     margin:1em auto;
 }
@@ -512,7 +512,7 @@ p.fexi_header_para1 a i {
   position: absolute;
   top: -0;
   right: -0;
-  background:#1da1f2;
+  background:#696969;
   width: 30px;
   height: 30px;
   margin: -5px 0 0;
@@ -590,7 +590,7 @@ p.fexi_header_para1 a i {
 	outline:none;
 }
 .form-module input[type="submit"]:hover {
-  background:#1da1f2;
+  background:#696969;
 }
 .form-module .cta {
 	background: #343434;
@@ -933,7 +933,7 @@ h2.typoh2{
 }
 h3.icon-subheading {
 	font-size: 28px;
-    color: #1da1f2 !important;
+    color: #696969 !important;
     margin: 30px 0 15px;
 }
 h3.agileits-icons-title {
@@ -988,7 +988,7 @@ h3.agileits-icons-title {
 h3.head {
     text-align: center;
     font-size: 2.5em;
-    color: #1da1f2;
+    color: #696969;
 }
 /*-- to-top --*/
 #toTop {

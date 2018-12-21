@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block slide_content %}
-<div class="faq" style="background-color:#76c2f1;">
+<div class="faq" style="background-color:#A9A9A9;">
    <div class="container">
      <div class="agileinfo-news-top-grids">
 
@@ -89,15 +89,15 @@
          <div class="wthree-news-right-top" style="overflow:hidden; height:530px;">
            <div class="news-grids-bottom" style="height:auto;">
              <!-- date -->
-             <div id="design" class="date" style=" background-color:#1da1f2;">
-               <div id="cycler" class="date-text" style="width:100%; background-color:#1da1f2;">
+             <div id="design" class="date" style=" background-color:#696969;">
+               <div id="cycler" class="date-text" style="width:100%; background-color:#696969;">
 
 
                    {% for school_updates in updater %}
-                   <div class="date-text" style="height:auto; background-color:#1da1f2;">
+                   <div class="date-text" style="height:auto; background-color:#696969;">
                             <p style="opacity:; font-size:15px; color:#333333; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; text-align:center;">published: <b>{{ school_updates.created_date }}</b></p>
                             <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; text-align:center;"><strong><u>{{ school_updates.news_title }}</u></strong></p>
-                            <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#76c2f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; text-align:center;"><strong>{{ school_updates.news_description|safe }}</strong></p><br/>
+                            <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#A9A9A9; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; text-align:center;"><strong>{{ school_updates.news_description|safe }}</strong></p><br/>
                    </div>
                    {% endfor %}
 
@@ -137,7 +137,7 @@
 
     <center>
    <div style="overflow-x:auto;" >
-     <div style="background-color:#1da1f2;">
+     <div style="background-color:#696969;">
 
        <h4 class="latest-text w3_latest_text" style="color:#ffffff;"><strong><center>Welcome to NjoNjo Girls' High School</center></strong></h4>
        </div>
@@ -151,7 +151,7 @@
          <div style="overflow-x:auto;" >
          <table >
            <thead>
-             <tr style="opacity:0.8; font-size:20px; max-width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+             <tr style="opacity:0.8; font-size:20px; max-width:100%; color:#ffffff; background-color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
              <th ><center>January</center></th>
              <th ><center>February</center></th>
              <th ><center>March</center></th>
@@ -160,31 +160,31 @@
            <tbody>
 
 
-             <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+             <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_january in jane %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_january.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_january.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_january.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_january.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_february in febe %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_february.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_february.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_february.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_february.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_march in mare %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_march.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_march.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_march.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_march.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
@@ -195,7 +195,7 @@
 
          <table >
            <thead>
-             <tr style="opacity:0.8; font-size:20px; max-width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+             <tr style="opacity:0.8; font-size:20px; max-width:100%; color:#ffffff; background-color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
              <th ><center>April</center></th>
              <th ><center>May</center></th>
              <th><center>June</center></th>
@@ -204,31 +204,31 @@
            <tbody>
 
 
-             <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+             <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_april in apre %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_april.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_april.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_april.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_april.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_may in maye %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_may.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_may.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_may.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_may.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_june in june %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_june.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_june.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_june.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_june.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
@@ -239,7 +239,7 @@
 
          <table >
            <thead>
-             <tr style="opacity:0.8; font-size:20px; max-width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+             <tr style="opacity:0.8; font-size:20px; max-width:100%; color:#ffffff; background-color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
              <th ><center>July</center></th>
              <th ><center>August</center></th>
              <th ><center>September</center></th>
@@ -248,31 +248,31 @@
            <tbody>
 
 
-             <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+             <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_july in jule %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_july.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_july.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_july.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_july.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_august in auge %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_august.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_august.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_august.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_august.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_september in sepe %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_september.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_september.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_september.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_september.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
@@ -284,7 +284,7 @@
 
          <table >
            <thead>
-             <tr style="opacity:0.8; font-size:20px; max-width:100%; font-color:#fffff; background-color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+             <tr style="opacity:0.8; font-size:20px; max-width:100%; color:#ffffff; background-color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
              <th ><center>October</center></th>
              <th><center>November</center></th>
              <th><center>December</center></th>
@@ -293,31 +293,31 @@
            <tbody>
 
 
-             <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
+             <tr style="opacity:0.8; font-size:; max-width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_october in octe %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_october.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_october.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_october.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_october.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_november in nove %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#C0C0C0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_november.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_november.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_november.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_november.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
              <td style="width:;"><center><a style="color:#ffffff;" href=""><br/>
                {% for school_events_december in dece %}
-               <div class="date-text" style="height:auto; width:250px; background-color:#58b7f1;">
+               <div class="date-text" style="height:auto; width:250px; background-color:#c0c0c0;">
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Date: <b>{{ school_events_december.event_date }}</b></p>
                         <p style="opacity:0.8; font-size:15px; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">About: <strong><u>{{ school_events_december.event_title|safe }}</u></strong></p>
-                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#58b7f1; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_december.event_description|safe }}</strong></p><br/>
+                        <p style="opacity:; font-size:17px; width:100%; color:#ffffff; background-color:#C0C0C0; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_events_december.event_description|safe }}</strong></p><br/>
                </div>
                {% endfor %}
                <br/></a></center></td>
