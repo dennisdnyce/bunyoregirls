@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from easy_thumbnails.conf import Settings as thumbnail_settings
 
+THUMBNAIL_PROCESSORS = (
+'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -32,6 +36,8 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'catalogues',
+    'easy_thumbnails',
+    'image_cropping',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

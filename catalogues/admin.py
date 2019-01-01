@@ -72,10 +72,14 @@ from .models import School_events_september
 from .models import School_events_october
 from .models import School_events_november
 from .models import School_events_december
+from image_cropping import ImageCroppingMixin
 
 admin.site.site_header = "Mukumu Girls Administration";
 # Register your models here.
-admin.site.register(School_photo_gallery)
+class School_photo_galleryAdmin(ImageCroppingMixin, admin.ModelAdmin):
+    pass
+
+admin.site.register(School_photo_gallery, School_photo_galleryAdmin)
 admin.site.register(School_bog_chairperson)
 admin.site.register(School_pta_chairperson)
 admin.site.register(School_principal)

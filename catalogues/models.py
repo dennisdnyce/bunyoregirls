@@ -1,4 +1,6 @@
+from PIL import Image
 from django.db import models
+from image_cropping import ImageRatioField
 from django.utils import timezone
 from django.core.validators import URLValidator
 
@@ -6,11 +8,16 @@ from django.core.validators import URLValidator
 class School_photo_gallery(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     title = models.CharField(max_length=200)
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
+    cropping = ImageRatioField('photo', '1024x768')
     created_date = models.DateTimeField(
               default=timezone.now)
     published_date = models.DateTimeField(
               blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school photo gallery'
+        verbose_name_plural = 'school photo galleries'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -26,6 +33,10 @@ class School_events_january (models.Model):
     event_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school events January'
+        verbose_name_plural = 'school events January'
+
     def publish(self):
        self.event_date = timezone.now()
        self.save()
@@ -39,6 +50,10 @@ class School_events_february (models.Model):
     event_description = models.TextField()
     event_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school events February'
+        verbose_name_plural = 'school events February'
 
     def publish(self):
        self.event_date = timezone.now()
@@ -54,6 +69,10 @@ class School_events_march (models.Model):
     event_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school events March'
+        verbose_name_plural = 'school events March'
+
     def publish(self):
        self.event_date = timezone.now()
        self.save()
@@ -67,6 +86,10 @@ class School_events_april (models.Model):
     event_description = models.TextField()
     event_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school events April'
+        verbose_name_plural = 'school events April'
 
     def publish(self):
        self.event_date = timezone.now()
@@ -82,6 +105,10 @@ class School_events_may (models.Model):
     event_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school events May'
+        verbose_name_plural = 'school events May'
+
     def publish(self):
        self.event_date = timezone.now()
        self.save()
@@ -95,6 +122,10 @@ class School_events_june (models.Model):
     event_description = models.TextField()
     event_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school events June'
+        verbose_name_plural = 'school events June'
 
     def publish(self):
        self.event_date = timezone.now()
@@ -110,6 +141,10 @@ class School_events_july (models.Model):
     event_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school events July'
+        verbose_name_plural = 'school events July'
+
     def publish(self):
        self.event_date = timezone.now()
        self.save()
@@ -123,6 +158,10 @@ class School_events_august (models.Model):
     event_description = models.TextField()
     event_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school events August'
+        verbose_name_plural = 'school events August'
 
     def publish(self):
        self.event_date = timezone.now()
@@ -138,6 +177,10 @@ class School_events_september (models.Model):
     event_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school events September'
+        verbose_name_plural = 'school events September'
+
     def publish(self):
        self.event_date = timezone.now()
        self.save()
@@ -151,6 +194,10 @@ class School_events_october (models.Model):
     event_description = models.TextField()
     event_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school events October'
+        verbose_name_plural = 'school events October'
 
     def publish(self):
        self.event_date = timezone.now()
@@ -166,6 +213,10 @@ class School_events_november (models.Model):
     event_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school events November'
+        verbose_name_plural = 'school events November'
+
     def publish(self):
        self.event_date = timezone.now()
        self.save()
@@ -180,6 +231,10 @@ class School_events_december (models.Model):
     event_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school events December'
+        verbose_name_plural = 'school events December'
+
     def publish(self):
        self.event_date = timezone.now()
        self.save()
@@ -191,11 +246,15 @@ class School_bog_chairperson(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
              default=timezone.now)
     published_date = models.DateTimeField(
              blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school BOG Chairperson'
+        verbose_name_plural = 'school BOG Chairperson'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -208,11 +267,15 @@ class School_pta_chairperson(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
              default=timezone.now)
     published_date = models.DateTimeField(
              blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school PTA Chairperson'
+        verbose_name_plural = 'school PTA Chairperson'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -225,11 +288,15 @@ class School_principal(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
               default=timezone.now)
     published_date = models.DateTimeField(
               blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Principal'
+        verbose_name_plural = 'school Principal'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -242,11 +309,15 @@ class School_dp_academics(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
               default=timezone.now)
     published_date = models.DateTimeField(
               blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school DP Academics'
+        verbose_name_plural = 'school DP Academics'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -259,11 +330,15 @@ class School_dp_admin(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school DP Admin'
+        verbose_name_plural = 'school DP Admin'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -275,11 +350,15 @@ class School_dp_admin(models.Model):
 class School_teachers(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Teachers'
+        verbose_name_plural = 'school Teachers'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -291,11 +370,15 @@ class School_teachers(models.Model):
 class School_student_council(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Students Council'
+        verbose_name_plural = 'school Students Council'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -308,11 +391,15 @@ class School_languages_hod(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Languages HOD'
+        verbose_name_plural = 'school Languages HOD'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -325,11 +412,15 @@ class School_math_hod(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Math HOD'
+        verbose_name_plural = 'school Math HOD'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -342,11 +433,15 @@ class School_sciences_hod(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Sciences HOD'
+        verbose_name_plural = 'school Sciences HOD'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -359,11 +454,15 @@ class School_humanities_hod(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Humanities HOD'
+        verbose_name_plural = 'school Humanities HOD'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -376,11 +475,15 @@ class School_technicals_hod(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200, null=True)
     few_words = models.TextField(null=True)
-    photo = models.FileField(upload_to='uploads/', null=True)
+    photo = models.ImageField(upload_to='uploads/', null=True)
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Technical Studies HOD'
+        verbose_name_plural = 'school Technical Studies HOD'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -393,11 +496,15 @@ class School_boarding_hod(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Boarding HOD'
+        verbose_name_plural = 'school Boarding HOD'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -410,11 +517,15 @@ class School_games_hod(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Games HOD'
+        verbose_name_plural = 'school Games HOD'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -427,11 +538,15 @@ class School_guiding_and_counseling_hod(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Guiding and Counciling HOD'
+        verbose_name_plural = 'school Guiding and Counciling HOD'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -444,11 +559,15 @@ class School_languages_department(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Languages Department'
+        verbose_name_plural = 'school Languages Department'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -461,11 +580,15 @@ class School_math_department(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Math Department'
+        verbose_name_plural = 'school Math Department'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -478,11 +601,15 @@ class School_sciences_department(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Sciences Department'
+        verbose_name_plural = 'school Sciences Department'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -495,11 +622,15 @@ class School_humanities_department(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Humanities Department'
+        verbose_name_plural = 'school Humanities Department'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -512,11 +643,15 @@ class School_technicals_department(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200, null=True)
     few_words = models.TextField(null=True)
-    photo = models.FileField(upload_to='uploads/', null=True)
+    photo = models.ImageField(upload_to='uploads/', null=True)
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Technicals Department'
+        verbose_name_plural = 'school Technicals Department'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -529,11 +664,15 @@ class School_boarding_department(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Boarding Department'
+        verbose_name_plural = 'school Boarding Department'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -546,11 +685,15 @@ class School_games_department(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Games Department'
+        verbose_name_plural = 'school Games Department'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -563,11 +706,15 @@ class School_guiding_and_counseling_department(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     name = models.CharField(max_length=200)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Guiding and Counciling Department'
+        verbose_name_plural = 'school Guiding and Counciling Department'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -579,11 +726,15 @@ class School_guiding_and_counseling_department(models.Model):
 class School_drama_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Drama Club'
+        verbose_name_plural = 'school Drama Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -595,11 +746,15 @@ class School_drama_club(models.Model):
 class School_music_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Music Club'
+        verbose_name_plural = 'school Music Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -611,11 +766,15 @@ class School_music_club(models.Model):
 class School_sports_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Sports Club'
+        verbose_name_plural = 'school Sports Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -627,11 +786,15 @@ class School_sports_club(models.Model):
 class School_christian_union_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Christian Union Club'
+        verbose_name_plural = 'school Christian Union Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -643,11 +806,15 @@ class School_christian_union_club(models.Model):
 class School_muslim_students_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Muslim Students Club'
+        verbose_name_plural = 'school Muslim Students Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -659,11 +826,15 @@ class School_muslim_students_club(models.Model):
 class School_journalism_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Journalism Club'
+        verbose_name_plural = 'school Journalism Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -675,11 +846,15 @@ class School_journalism_club(models.Model):
 class School_debate_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Debate Club'
+        verbose_name_plural = 'school Debate Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -691,11 +866,15 @@ class School_debate_club(models.Model):
 class School_science_engineering_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Science Engineering Club'
+        verbose_name_plural = 'school Science Engineering Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -707,11 +886,15 @@ class School_science_engineering_club(models.Model):
 class School_peace_club(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Peace Club'
+        verbose_name_plural = 'school Peace Club'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -723,11 +906,15 @@ class School_peace_club(models.Model):
 class School_history(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school History'
+        verbose_name_plural = 'school History'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -739,11 +926,15 @@ class School_history(models.Model):
 class School_mission(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Mission'
+        verbose_name_plural = 'school Mission'
 
     def publish(self):
         self.published_date = timezone.now()
@@ -755,11 +946,15 @@ class School_mission(models.Model):
 class School_vision(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Vision'
+        verbose_name_plural = 'school Vision'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -771,11 +966,15 @@ class School_vision(models.Model):
 class School_site_map(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Site Map'
+        verbose_name_plural = 'school Site Map'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -787,11 +986,15 @@ class School_site_map(models.Model):
 class School_library(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Library'
+        verbose_name_plural = 'school Library'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -803,11 +1006,15 @@ class School_library(models.Model):
 class School_dining_hall(models.Model):
        author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
        text = models.TextField()
-       photo = models.FileField(upload_to='uploads/')
+       photo = models.ImageField(upload_to='uploads/')
        created_date = models.DateTimeField(
              default=timezone.now)
        published_date = models.DateTimeField(
               blank=True, null=True)
+
+       class Meta:
+           verbose_name = 'school Dining Hall'
+           verbose_name_plural = 'school Dining Hall'
 
        def publish(self):
           self.published_date = timezone.now()
@@ -819,11 +1026,15 @@ class School_dining_hall(models.Model):
 class School_form_one_classes(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Form One Classes'
+        verbose_name_plural = 'school Form One Classes'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -835,11 +1046,15 @@ class School_form_one_classes(models.Model):
 class School_form_two_classes(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Form Two Classes'
+        verbose_name_plural = 'school Form Two Classes'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -851,11 +1066,15 @@ class School_form_two_classes(models.Model):
 class School_form_three_classes(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Form Three Classes'
+        verbose_name_plural = 'school Form Three Classes'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -867,11 +1086,15 @@ class School_form_three_classes(models.Model):
 class School_form_four_classes(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Form Four Classes'
+        verbose_name_plural = 'school Form Four Classes'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -883,11 +1106,15 @@ class School_form_four_classes(models.Model):
 class School_transport(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Transport'
+        verbose_name_plural = 'school Transport'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -899,11 +1126,15 @@ class School_transport(models.Model):
 class School_physics_lab(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Physics Lab'
+        verbose_name_plural = 'school Physics Lab'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -915,11 +1146,15 @@ class School_physics_lab(models.Model):
 class School_chemistry_lab(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Chemistry Lab'
+        verbose_name_plural = 'school Chemistry Lab'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -931,11 +1166,15 @@ class School_chemistry_lab(models.Model):
 class School_biology_lab(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Biology Lab'
+        verbose_name_plural = 'school Biology Lab'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -947,11 +1186,15 @@ class School_biology_lab(models.Model):
 class School_computer_lab(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Computer Lab'
+        verbose_name_plural = 'school Computer Lab'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -963,11 +1206,15 @@ class School_computer_lab(models.Model):
 class School_fence(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Fence'
+        verbose_name_plural = 'school Fence'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -979,11 +1226,15 @@ class School_fence(models.Model):
 class School_bakery(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Bakery'
+        verbose_name_plural = 'school Bakery'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -995,11 +1246,15 @@ class School_bakery(models.Model):
 class School_forest(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Forest'
+        verbose_name_plural = 'school Forest'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -1011,11 +1266,15 @@ class School_forest(models.Model):
 class School_car_park(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
            default=timezone.now)
     published_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Car Park'
+        verbose_name_plural = 'school Car Park'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -1027,11 +1286,15 @@ class School_car_park(models.Model):
 class School_generator(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Generator'
+        verbose_name_plural = 'school Generator'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -1043,11 +1306,15 @@ class School_generator(models.Model):
 class School_beautification(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     text = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Beautification'
+        verbose_name_plural = 'school Beautification'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -1058,21 +1325,25 @@ class School_beautification(models.Model):
 
 class School_general_information(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
-    school_logo = models.FileField(upload_to='uploads/')
+    school_logo = models.ImageField(upload_to='uploads/')
     school_twitterlink = models.TextField(validators=[URLValidator()])
     school_facebooklink = models.TextField(validators=[URLValidator()])
-    mail_icon = models.FileField(upload_to='uploads/', null=True)
+    mail_icon = models.ImageField(upload_to='uploads/', null=True)
     current_year = models.IntegerField(default=2007)
     school_address = models.TextField()
     school_website = models.TextField(null=True)
     school_emailaddress = models.CharField(max_length=200)
-    address_icon = models.FileField(upload_to='uploads/', null=True)
+    address_icon = models.ImageField(upload_to='uploads/', null=True)
     school_phone_number = models.CharField(max_length=200)
     other_phone_number = models.CharField(max_length=200, null=True)
     created_date = models.DateTimeField(
           default=timezone.now)
     published_date = models.DateTimeField(
           blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school General Information'
+        verbose_name_plural = 'school General Information'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -1093,6 +1364,10 @@ class School_anthem (models.Model):
            default=timezone.now)
     published_date = models.DateTimeField(
            blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Anthem'
+        verbose_name_plural = 'school Anthem'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -1118,6 +1393,10 @@ class School_core_values (models.Model):
     published_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school Core Values'
+        verbose_name_plural = 'school Core Values'
+
     def publish(self):
        self.published_date = timezone.now()
        self.save()
@@ -1134,6 +1413,10 @@ class School_updates (models.Model):
     published_date = models.DateTimeField(
            blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'school Update'
+        verbose_name_plural = 'school Updates'
+
     def publish(self):
        self.published_date = timezone.now()
        self.save()
@@ -1144,11 +1427,15 @@ class School_updates (models.Model):
 class School_alumnae(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     few_words = models.TextField()
-    photo = models.FileField(upload_to='uploads/')
+    photo = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
              default=timezone.now)
     published_date = models.DateTimeField(
              blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Alumnae'
+        verbose_name_plural = 'school Alumnae'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -1160,11 +1447,15 @@ class School_alumnae(models.Model):
 class School_downloads(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING,)
     document_name = models.CharField(max_length=200)
-    document_file = models.FileField(upload_to='uploads/')
+    document_file = models.ImageField(upload_to='uploads/')
     created_date = models.DateTimeField(
          default=timezone.now)
     published_date = models.DateTimeField(
          blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Download'
+        verbose_name_plural = 'school Downloads'
 
     def publish(self):
        self.published_date = timezone.now()
@@ -1196,6 +1487,10 @@ class School_performance(models.Model):
              default=timezone.now)
     published_date = models.DateTimeField(
              blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'school Performance'
+        verbose_name_plural = 'school Performance'
 
     def publish(self):
        self.published_date = timezone.now()
