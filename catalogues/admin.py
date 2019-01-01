@@ -73,7 +73,7 @@ from .models import School_events_october
 from .models import School_events_november
 from .models import School_events_december
 
-admin.site.site_header = "Bunyore Girls Administration";
+admin.site.site_header = "Mukumu Girls Administration";
 # Register your models here.
 admin.site.register(School_photo_gallery)
 admin.site.register(School_bog_chairperson)
