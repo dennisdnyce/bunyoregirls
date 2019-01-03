@@ -43,11 +43,12 @@
           {% for school_mission in mission %}
           <div class="wthree-news-left">
             <div class="wthree-news-left-img">
+                <img src="{{ school_mission.photo.url }}" width="100%" height="auto" alt="" />
               <div class="w3-agile-news-text">
-                <br/><p style="opacity:0.8; font-size:20px; width:100%; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; "><strong>{{ school_mission.text }}</strong></p>
+                <br/><p style="opacity:0.8; font-size:20px; max-width:100%; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; "><strong>{{ school_mission.text }}</strong></p>
               </div>
               <div id="fb-root"></div>
-              <img src="{{ school_mission.photo.url }}" width="100%" height="auto" alt="" />
+
             </div>
           </div>
           {% endfor %}
@@ -58,11 +59,12 @@
         {% for school_vision in vision %}
         <div class="wthree-news-left">
           <div class="wthree-news-left-img">
+              <img src="{{ school_vision.photo.url }}" width="100%" height="auto" alt="" />
             <div class="w3-agile-news-text">
-              <br/><p style="opacity:0.8; font-size:20px; width:100%; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_vision.text }}</strong></p>
+              <br/><p style="opacity:0.8; font-size:20px; width:100%; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;"><strong>{{ school_vision.text }}</strong></p>
             </div>
             <div id="fb-root"></div>
-            <img src="{{ school_vision.photo.url }}" width="100%" height="auto" alt="" />
+
           </div>
         </div>
         {% endfor %}
@@ -76,16 +78,16 @@
             <div id="fb-root"></div>
             <div class="w3-agile-news-text">
               <br/>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">1.<b>&emsp;{{ school_core_values.core_value_one }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">2.<b>&emsp;{{ school_core_values.core_value_two }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">3.<b>&emsp;{{ school_core_values.core_value_three }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">4.<b>&emsp;{{ school_core_values.core_value_four }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">5.<b>&emsp;{{ school_core_values.core_value_five }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">6.<b>&emsp;{{ school_core_values.core_value_six }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">7.<b>&emsp;{{ school_core_values.core_value_seven }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">8.<b>&emsp;{{ school_core_values.core_value_eight }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">9.<b>&emsp;{{ school_core_values.core_value_nine }}</b></p>
-              <p style="font-weight:bold; opacity:; font-size:22px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">10.<b>&emsp;{{ school_core_values.core_value_ten }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">1.<b>&emsp;{{ school_core_values.core_value_one }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">2.<b>&emsp;{{ school_core_values.core_value_two }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">3.<b>&emsp;{{ school_core_values.core_value_three }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">4.<b>&emsp;{{ school_core_values.core_value_four }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">5.<b>&emsp;{{ school_core_values.core_value_five }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">6.<b>&emsp;{{ school_core_values.core_value_six }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">7.<b>&emsp;{{ school_core_values.core_value_seven }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">8.<b>&emsp;{{ school_core_values.core_value_eight }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">9.<b>&emsp;{{ school_core_values.core_value_nine }}</b></p>
+              <p style="font-weight:bold; opacity:; font-size:22px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">10.<b>&emsp;{{ school_core_values.core_value_ten }}</b></p>
             </div>
           </div>
         </div>
@@ -99,13 +101,13 @@
             <div id="fb-root"></div>
             <div class="w3-agile-news-text">
               <br/>
-              <p style="font-weight:bold; opacity:; font-size:20px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Main Chorus:</b></p>
+              <p style="font-weight:bold; opacity:; font-size:20px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Main Chorus:</b></p>
               <b><h3><p style="opacity:0.8; font-size:18px; width:100%; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; "><strong>{{ school_anthem.stanza_two|safe }}</strong></p></h3></b><br/>
-              <p style="font-weight:bold; opacity:; font-size:20px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Stanza One:</b></p>
+              <p style="font-weight:bold; opacity:; font-size:20px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Stanza One:</b></p>
               <b><h3><p style="opacity:0.8; font-size:18px; width:100%; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; "><strong>{{ school_anthem.stanza_one|safe }}</strong></p></h3></b><br/>
-              <p style="font-weight:bold; opacity:; font-size:20px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Stanza Two:</b></p>
+              <p style="font-weight:bold; opacity:; font-size:20px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Stanza Two:</b></p>
               <b><h3><p style="opacity:0.8; font-size:18px; width:100%; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; "><strong>{{ school_anthem.stanza_three|safe }}</strong></p></h3></b><br/>
-              <p style="font-weight:bold; opacity:; font-size:20px; color:#1da1f2; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Stanza Three:</b></p>
+              <p style="font-weight:bold; opacity:; font-size:20px; color:#696969; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em;">Stanza Three:</b></p>
               <b><h3><p style="opacity:0.8; font-size:18px; width:100%; color:#000000; border-bottom-left-radius:0.5em; border-bottom-right-radius:0.5em; border-top-right-radius:0.5em; border-top-left-radius:0.5em; "><strong>{{ school_anthem.stanza_five|safe }}</strong></p></h3></b><br/><br/>
             </div>
           </div>
